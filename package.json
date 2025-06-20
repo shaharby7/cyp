@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
+  "name": "cyp",
+  "version": "1.0.0",
+  "description": "shell helper based on MCP",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "npx lerna run build",
+    "test": "npx lerna run test",
+    "lint": "npx eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:shaharby7/cyp.git"
+  },
+  "keywords": [
+    "MCP",
+    "CLI",
+    "shell helper"
+  ],
+  "author": "shahar ben yitzhak",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.29.0",
+    "husky": "^9.1.7",
+    "lerna": "^8.2.2",
+    "lint-staged": "^16.1.2",
+    "prettier": "3.5.3",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3"
+  }
+}

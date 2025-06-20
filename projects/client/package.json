@@ -1,0 +1,32 @@
+{
+  "name": "@cyp/client",
+  "version": "0.1.0",
+  "description": "mcp client for cyp",
+  "author": "shahar ben yitzhak <shaharby7@gmail.com>",
+  "homepage": "github.com:shaharby7/cyp",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "github.com:shaharby7/cyp"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "develop": "tsc -w"
+  },
+  "devDependencies": {
+    "jest": "^30.0.2"
+  }
+}
