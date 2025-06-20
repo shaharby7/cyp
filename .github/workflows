@@ -1,0 +1,32 @@
+name: Validate
+
+on:
+  pull_request:
+    types:
+    - opened
+    - edited
+    - reopened
+    - synchronize
+
+jobs:
+  title:
+    name: Validate PR title
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "20.x"
+        registry-url: "https://npm.pkg.github.com"
+        scope: "@hg-official"
+    - run: npm ci
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      name: Install
+    - run: |
+        npm run lint
+      name: Lint
+    - run: |
+        npm run build
+        npm run test
+      name: Build & Test
