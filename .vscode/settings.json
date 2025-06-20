@@ -3,5 +3,12 @@
         "shahar",
         "shaharby",
         "yitzhak"
-    ]
+    ],
+    "conventionalCommits.scopes": [
+        "boilerplate"
+    ],
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    }
 }
