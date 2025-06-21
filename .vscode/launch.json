@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cyp",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}/projects/client",
+      "internalConsoleOptions": "openOnSessionStart",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "develop", "--", "list files on my home directory"],
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceRoot}/node_modules/**/*.js",
+        "${workspaceRoot}/**/node_modules/**/*.js",
+      ]
+    }
+  ]
+}
