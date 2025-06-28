@@ -11,7 +11,9 @@
     "prepare": "husky install",
     "build": "npx lerna run build",
     "test": "npx lerna run test",
-    "lint": "npx eslint"
+    "lint": "npx eslint",
+    "dev:server": "npm run dev -w @cyp/server",
+    "dev:cli": "npm run dev -w @cyp/client"
   },
   "repository": {
     "type": "git",

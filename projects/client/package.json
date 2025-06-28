@@ -22,13 +22,20 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "shx rm -rf dist && tsc -b",
     "test": "jest",
-    "develop": "tsc -w"
+    "dev": "ts-node src/index.ts"
   },
   "devDependencies": {
     "@jest/types": "^30.0.1",
+    "dotenv": "^16.6.0",
     "jest": "^30.0.2",
+    "shx": "^0.4.0",
     "ts-jest": "^29.4.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.55.0",
+    "@modelcontextprotocol/sdk": "^1.13.2",
+    "commander": "^14.0.0"
   }
 }
