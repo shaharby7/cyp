@@ -3,4 +3,3 @@
 
 # npm run test
 npx lerna run lint-staged
-npm run test

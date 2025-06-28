@@ -24,11 +24,17 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "develop": "tsc -w"
+    "dev": "npx ts-node-dev -r ./tsconfig.json ./src/index.ts"
   },
   "devDependencies": {
     "@jest/types": "^30.0.1",
     "jest": "^30.0.2",
-    "ts-jest": "^29.4.0"
+    "ts-jest": "^29.4.0",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.2",
+    "express": "^5.1.0",
+    "zod": "^3.25.67"
   }
 }

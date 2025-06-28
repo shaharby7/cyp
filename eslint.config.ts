@@ -18,7 +18,7 @@ export default defineConfig([
       parser: tsParser,
     },
     rules: {
-      "no-console": "warn",
+      "no-console": "off", // We are building cli tool :)
       "no-unused-vars": "warn",
     },
   },

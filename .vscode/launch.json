@@ -5,15 +5,22 @@
       "name": "cyp",
       "type": "node",
       "request": "launch",
-      "cwd": "${workspaceRoot}/projects/client",
+      "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run-script", "develop", "--", "list files on my home directory"],
-      "skipFiles": [
-        "<node_internals>/**",
-        "${workspaceRoot}/node_modules/**/*.js",
-        "${workspaceRoot}/**/node_modules/**/*.js",
-      ]
+      "runtimeArgs": ["run-script", "dev:cli", "--", "list files on my home directory"],
+      "skipFiles": ["<node_internals>/**", "${workspaceRoot}/node_modules/**/*.js", "${workspaceRoot}/**/node_modules/**/*.js"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "development server",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev:server"],
+      "skipFiles": ["<node_internals>/**", "${workspaceRoot}/node_modules/**/*.js", "${workspaceRoot}/**/node_modules/**/*.js"]
     }
   ]
 }
